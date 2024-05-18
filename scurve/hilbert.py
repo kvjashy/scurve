@@ -1,4 +1,5 @@
-import utils, math
+from scurve import utils
+import math
 
 
 def transform(entry, direction, width, x):
@@ -33,7 +34,7 @@ def entry(x):
     if x == 0:
         return 0
     else:
-        return utils.graycode(2*((x-1)/2))
+        return utils.graycode(2*((x-1)//2))
 
 
 def hilbert_point(dimension, order, h):
